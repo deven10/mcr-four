@@ -105,20 +105,26 @@ export const Homepage = () => {
                       {isBookmarked ? (
                         <i
                           onClick={() =>
-                            setPostData((prev) => ({
-                              ...prev,
-                              isBookmarked: false,
-                            }))
+                            setPostData(
+                              postData.map((post) =>
+                                post.postId === postId
+                                  ? { ...post, isBookmarked: false }
+                                  : post
+                              )
+                            )
                           }
                           className="fa-solid fa-bookmark"
                         ></i>
                       ) : (
                         <i
                           onClick={() =>
-                            setPostData((prev) => ({
-                              ...prev,
-                              isBookmarked: true,
-                            }))
+                            setPostData(
+                              postData.map((post) =>
+                                post.postId === postId
+                                  ? { ...post, isBookmarked: true }
+                                  : post
+                              )
+                            )
                           }
                           className="fa-regular fa-bookmark"
                         ></i>
