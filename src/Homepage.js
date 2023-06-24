@@ -101,7 +101,7 @@ export const Homepage = () => {
                     <div className="comment">
                       <i className="fa-solid fa-share-nodes"></i>
                     </div>
-                    <div className="comment">
+                    <div className="comment bookmark">
                       {isBookmarked ? (
                         <i
                           onClick={() =>

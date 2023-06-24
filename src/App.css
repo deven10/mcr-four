@@ -330,3 +330,7 @@
   font-weight: 600;
   font-family: sans-serif;
 }
+
+.bookmark {
+  cursor: pointer;
+}
