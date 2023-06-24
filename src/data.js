@@ -40,8 +40,8 @@ export const forumData = {
       postTitle: "Can I learn HTML, CSS, and JavaScript in 1 year?",
       postDescription:
         "I am looking to make my career in web development and want to learn these technologies. Can I learn these in 1 year and get a job?",
-      upvotes: 350,
-      downvotes: 0,
+      upvotes: 450,
+      downvotes: 100,
       timeAgo: 6,
       tags: ["html", "javascript", "web development"],
       createdAt: "2023-06-24",

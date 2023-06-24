@@ -12,14 +12,16 @@ export const Homepage = () => {
   useEffect(() => {
     if (sortBy === "trending") {
       const sorted = [...postData];
-      sorted.sort((a, b) => b.createdAt.localeCompare(a.createdAt));
+      sorted.sort(
+        (a, b) => b.upvotes - b.downvotes - (a.upvotes - a.downvotes)
+      );
       setPostData(sorted);
     } else {
       const sorted = [...postData];
-      sorted.sort((a, b) => a.createdAt.localeCompare(b.createdAt));
+      sorted.sort(
+        (a, b) => a.upvotes - a.downvotes - (b.upvotes - b.downvotes)
+      );
       setPostData(sorted);
-      console.log(sorted);
-      console.log("hi");
     }
   }, [sortBy]);
 
