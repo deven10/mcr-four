@@ -1,38 +1,332 @@
-.App {
-  text-align: center;
+.App{
+  background-color: #f7f7f7;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header{
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header p{
+  padding: 0px 100px;
+  width: 70%;
+  font-size: 22px;
+  font-family: sans-serif;
+  color: #5348c7;
+  font-weight: 700;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-wrapper{
+  padding: 25px 100px;
+  height: 85%;
+  display: flex;
+  gap: 20px;
+}
+
+/* ----------------FOR LEFT SIDE ------------------------------------------------------ */
+.quick-links{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  flex:0.5;
+}
+
+.links-group .link{
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: sans-serif;
+}
+
+.link{
+  display: flex; 
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+
+.link .icon{
+  font-size: 20px;
+}
+
+.link.bold{
+  font-weight: 700;
+}
+
+.profile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile .img{
+  height: 40px;
+  width: 40px;
+  background-color: #a6a6a6;
+  border-radius: 50%;
+  border: 0;
+}
+
+.profile-details p{
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.profile-details .name{
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0px 0px 5px 0px;
+}
+.profile-details .username{
+  font-size: 13px;
+  font-weight: 400;
+  color: #5348c7;
+}
+
+
+.post-comments {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 10px;
+  padding: 15px;
+}
+.post-comments .img{
+  height: 40px;
+  width: 40px;
+  background-color: #a6a6a6;
+  border-radius: 50%;
+  border: 0;
+}
+
+.comment-details{
+  width: 100%;
+}
+
+.comment-details .comment-username{
+  margin: 0;
+  font-size: 14px;
+  font-family: sans-serif;
+  font-weight: 700;
+  padding-bottom: 5px;
+}
+
+.comment-details .comment-username span{
+  font-weight: 400;
+  color: #adadad;
+}
+
+.repy-to-username{
+  margin: 0;
+  padding-bottom: 5px;
+  color: #adadad;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+.repy-to-username span{
+  color: #5348c7;
+}
+
+.comment-content{
+  margin: 0;
+  padding-bottom: 8px;
+  font-weight: 500;
+  font-size: 15px;
+  font-family: sans-serif;
+}
+
+.comment-action-button{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0px;
+  width: 100%;
+}
+
+/* ---------------FOR CENTER PART------------------------------------------------------- */
+.homepage{
+  flex: 2.5;
+}
+
+.single-post{
+  display: flex;
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 20px;
+  gap: 25px;
+}
+
+.post-information{
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 25px;
+  border: 0;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.post-wrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+.user-details{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+.user-details .img{
+  height: 30px;
+  width: 30px;
+  background-color: #a6a6a6;
+  border-radius: 50%;
+  border: 0;
+}
+
+.user-details p{
+  margin: 0;
+}
+
+.post-title{
+  margin: 0;
+  padding: 10px 0px 5px 0px;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: sans-serif;
+}
+
+.post-tags{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+
+.post-tags .tag{
+  margin: 0;
+  font-size: 11px;
+  font-weight: 700;
+  font-family: sans-serif;
+  padding: 3px 8px;
+  color: #5348c7;
+  border-radius: 5px;
+  background-color: #e5e3f7;
+  text-transform: uppercase;
+}
+
+.post-content{
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: sans-serif;
+  padding: 8px 0px;
+  border-bottom: 1px solid #f2f1f2;
+  line-height: 18px;
+}
+
+.post-action-buttons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0px;
+}
+
+.homepage-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 25px;
+}
+
+.posts{
+  flex: 2;
+}
+
+
+/* ---------------FOR RIGHT SIDE------------------------------------------------------- */
+.sortby{
+  flex:1;
+}
+
+.sortby select{
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: sans-serif;
+  border-radius: 5px;
+  background-color: #e7e6e6;
+}
+
+
+/* ---------COMMON CSS------------------------------------------------------------------------ */
+.heading{
+  padding: 0px 0px 15px 0px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: sans-serif;
+  margin: 0;
+  font-weight: 700;
+}
+
+
+/* --------- */
+
+.back-link{
+  width: 100%;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: sans-serif;
+  list-style: none;
+  color: #111;
+  text-decoration: none;
+}
+
+.back-link i{
+  margin-right: 8px;
+  margin-bottom: 10px;
+}
+
+.vote-button{
+  border: 0;
+  background-color: #fff;
+}
+
+.upvote-caret{
+  font-size: 50px;
+  color: #5348c7;
+  cursor: pointer;
+}
+
+.downvote-caret{
+  font-size: 50px;
+  color: #a6a6a6;
+  cursor: pointer;
+}
+
+.votes-wrapper{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.votes-wrapper p{
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: sans-serif;
 }
